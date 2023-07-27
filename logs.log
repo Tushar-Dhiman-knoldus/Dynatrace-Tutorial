@@ -1,0 +1,4 @@
+[INFO] [07/25/2023 15:18:49.223] [MySystem-akka.actor.default-dispatcher-5] [akka://MySystem/user/PoisonPillExample] Actor started
+[ERROR] [07/25/2023 15:18:49.226] [MySystem-akka.actor.default-dispatcher-5] [akka://MySystem/user/PoisonPillExample] Error Message Log
+[ERROR] [07/25/2023 15:19:04.222] [MySystem-akka.actor.default-dispatcher-6] [akka://MySystem/user/PoisonPillExample] Error Message Log
+[ERROR] [07/25/2023 15:19:19.222] [MySystem-akka.actor.default-dispatcher-5] [akka://MySystem/user/PoisonPillExample] Error Message Log
