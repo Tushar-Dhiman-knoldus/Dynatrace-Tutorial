@@ -18,6 +18,8 @@ COPY . /app
 RUN sbt "set libraryDependencies += \"org.apache.logging.log4j\" % \"log4j-api\" % \"2.14.1\""
 RUN sbt "set libraryDependencies += \"org.apache.logging.log4j\" % \"log4j-core\" % \"2.14.1\""
 RUN sbt "set libraryDependencies += \"com.typesafe.akka\" %% \"akka-actor\" % \"2.8.0\""
+RUN sbt "set libraryDependencies += \"io.opentelemetry\" % \"opentelemetry-api\" % \"1.24.0\""
+RUN sbt "set libraryDependencies += \"io.opentelemetry\" % \"opentelemetry-sdk\" % \"1.24.0\""
 
 # Build the Scala application
 RUN sbt compile
@@ -30,4 +32,4 @@ RUN mkdir -p $LOG_DIR
 ENV LOG_LEVEL INFO
 
 # Specify the logging driver and options
-CMD ["sbt", "-Dlog.dir=$LOG_DIR", "-Dlog.level=$LOG_LEVEL", "-Dakka.coordinated-shutdown.exit-jvm=off", "run"]*
+CMD ["sbt", "-Dlog.dir=$LOG_DIR", "-Dlog.level=$LOG_LEVEL", "-Dakka.coordinated-shutdown.exit-jvm=off", "run"]
